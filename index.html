@@ -8,7 +8,6 @@
     <meta name="author" content="Your Name">
     <title>Justin Bieber Vespa</title>
     <style>
-        /* Custom Font */
         @font-face {
             font-family: 'Roboto-Medium';
             src: url('assets/Roboto-Medium.ttf') format('truetype');
@@ -26,25 +25,31 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
-        /* List Style */
-        nav ul {
-            list-style-type: square;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-right: 15px;
-        }
-
-        /* Responsive Background Image */
+        /* Header and Navigation */
         header {
             background: url('assets/pink-sky-background-with-crescent-moon_53876-129048.jpg.avif') no-repeat center center;
             background-size: cover;
             padding: 20px;
             color: white;
             text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
         }
 
         .hamburger {
@@ -58,11 +63,6 @@
             height: 3px;
             background-color: white;
             margin: 4px 0;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
         }
 
         .sidebar {
@@ -101,12 +101,8 @@
         /* Asymmetrical Grid */
         .grid-container {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 10px;
-        }
-
-        .grid-item:nth-child(even) {
-            grid-column: span 2;
         }
 
         /* Animation */
@@ -142,6 +138,38 @@
             .sidebar {
                 display: flex;
             }
+        }
+
+        /* Contact Form */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-top: 10px;
+        }
+
+        form input[type="text"], form textarea, form select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        form fieldset {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        form button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
