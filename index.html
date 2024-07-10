@@ -14,18 +14,16 @@
         }
 
         body {
-            font-family: 'Roboto-Medium', sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Text Shadow */
         h1, h2, p {
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
 
-        /* Header and Navigation */
         header {
             background: url('assets/pink-sky-background-with-crescent-moon_53876-129048.jpg.avif') no-repeat center center;
             background-size: cover;
@@ -40,6 +38,7 @@
             margin: 0;
             display: flex;
             justify-content: center;
+            font-family: 'Roboto-Medium', sans-serif;
         }
 
         nav ul li {
@@ -98,17 +97,11 @@
             height: auto;
         }
 
-        /* Asymmetrical Grid */
+        /* Grid Layout for Gallery */
         .grid-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
-        }
-
-        /* Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
         }
 
         .fade-in {
@@ -170,6 +163,10 @@
             color: white;
             border: none;
             cursor: pointer;
+        }
+
+        section {
+            text-align: justify;
         }
     </style>
 </head>
