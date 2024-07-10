@@ -7,7 +7,143 @@
     <meta name="keywords" content="Justin Bieber, Vespa, Scooter, Collaboration">
     <meta name="author" content="Your Name">
     <title>Justin Bieber Vespa</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom Font */
+        @font-face {
+            font-family: 'Roboto-Medium';
+            src: url('assets/Roboto-Medium.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Roboto-Medium', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Text Shadow */
+        h1, h2, p {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* List Style */
+        nav ul {
+            list-style-type: square;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        /* Responsive Background Image */
+        header {
+            background: url('assets/pink-sky-background-with-crescent-moon_53876-129048.jpg.avif') no-repeat center center;
+            background-size: cover;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .sidebar {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 200px;
+            background: rgba(0, 0, 0, 0.8);
+            flex-direction: column;
+            padding: 20px;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sidebar.active {
+            transform: translateX(0);
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .responsive-image {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Asymmetrical Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 10px;
+        }
+
+        .grid-item:nth-child(even) {
+            grid-column: span 2;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .sidebar {
+                display: flex;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -46,32 +182,20 @@
             <p>Check out some images of Justin Bieber's Vespa:</p>
             <div class="grid-item">
                 <picture>
-                    <source srcset="justin-bieber-vespa-1.jpeg" media="(min-width: 800px)">
-                    <img src="justin-bieber-vespa-1.jpeg" alt="Justin Bieber with Vespa" class="responsive-image">
+                    <source srcset="assets/justin-bieber-vespa-1.jpeg" media="(min-width: 800px)">
+                    <img src="assets/justin-bieber-vespa-1.jpeg" alt="Justin Bieber with Vespa" class="responsive-image">
                 </picture>
             </div>
             <div class="grid-item">
                 <picture>
-                    <source srcset="justin-bieber-vespa-2.jpeg" media="(min-width: 800px)">
-                    <img src="justin-bieber-vespa-2.jpeg" alt="Justin Bieber's custom Vespa" class="responsive-image">
+                    <source srcset="assets/justin-bieber-vespa-2.jpeg" media="(min-width: 800px)">
+                    <img src="assets/justin-bieber-vespa-2.jpeg" alt="Justin Bieber's custom Vespa" class="responsive-image">
                 </picture>
             </div>
             <div class="grid-item">
                 <picture>
-                    <source srcset="justin-bieber-vespa-3.jpeg" media="(min-width: 800px)">
-                    <img src="justin-bieber-vespa-3.jpeg" alt="Close-up of Justin Bieber's Vespa design" class="responsive-image">
-                </picture>
-            </div>
-            <div class="grid-item">
-                <picture>
-                    <source srcset="justin-bieber-vespa-4.jpeg" media="(min-width: 800px)">
-                    <img src="justin-bieber-vespa-4.jpeg" alt="Another angle of Justin Bieber's Vespa" class="responsive-image">
-                </picture>
-            </div>
-            <div class="grid-item">
-                <picture>
-                    <source srcset="justin-bieber-vespa-5.jpeg" media="(min-width: 800px)">
-                    <img src="justin-bieber-vespa-5.jpeg" alt="Detail of Vespa design" class="responsive-image">
+                    <source srcset="assets/justin-bieber-vespa-3.jpeg" media="(min-width: 800px)">
+                    <img src="assets/justin-bieber-vespa-3.jpeg" alt="Close-up of Justin Bieber's Vespa design" class="responsive-image">
                 </picture>
             </div>
         </section>
