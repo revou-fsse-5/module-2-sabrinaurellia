@@ -1,0 +1,60 @@
+/* Custom Font */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('path/to/customfont.woff2') format('woff2');
+}
+
+body {
+    font-family: 'CustomFont', sans-serif;
+}
+
+/* Text Shadow */
+h1, h2, p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* List Style */
+nav ul {
+    list-style-type: square;
+}
+
+/* Responsive Background Image */
+header {
+    background: url('path/to/background-image.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Responsive Images */
+.responsive-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Asymmetrical Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+}
+
+.grid-item:nth-child(even) {
+    grid-column: span 2;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.sidebar {
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
