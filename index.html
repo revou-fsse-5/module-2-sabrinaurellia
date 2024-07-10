@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Justin Bieber's Vespa - All about the collaboration between Justin Bieber and Vespa.">
+    <meta name="keywords" content="Justin Bieber, Vespa, Scooter, Collaboration">
+    <meta name="author" content="Your Name">
+    <title>Justin Bieber Vespa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Justin Bieber Vespa</h1>
+        <div class="hamburger" onclick="toggleSidebar()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="sidebar" id="sidebar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <main>
+        <section id="home" class="fade-in">
+            <h2>Welcome to Justin Bieber Vespa</h2>
+            <p>Discover the unique collaboration between Justin Bieber and Vespa, bringing you an exclusive and stylish scooter experience.</p>
+        </section>
+        <section id="about" class="fade-in">
+            <h2>About the Collaboration</h2>
+            <p>Justin Bieber, the global pop sensation, has teamed up with Vespa to create a one-of-a-kind scooter that combines his unique style with Vespa's iconic design. This limited edition Vespa features exclusive graphics, custom colors, and personalized details that reflect Bieber's influence.</p>
+        </section>
+        <section id="gallery" class="grid-container">
+            <h2>Gallery</h2>
+            <p>Check out some images of Justin Bieber's Vespa:</p>
+            <div class="grid-item">
+                <picture>
+                    <source srcset="justin-bieber-vespa-1.jpeg" media="(min-width: 800px)">
+                    <img src="justin-bieber-vespa-1.jpeg" alt="Justin Bieber with Vespa" class="responsive-image">
+                </picture>
+            </div>
+            <div class="grid-item">
+                <picture>
+                    <source srcset="justin-bieber-vespa-2.jpeg" media="(min-width: 800px)">
+                    <img src="justin-bieber-vespa-2.jpeg" alt="Justin Bieber's custom Vespa" class="responsive-image">
+                </picture>
+            </div>
+            <div class="grid-item">
+                <picture>
+                    <source srcset="justin-bieber-vespa-3.jpeg" media="(min-width: 800px)">
+                    <img src="justin-bieber-vespa-3.jpeg" alt="Close-up of Justin Bieber's Vespa design" class="responsive-image">
+                </picture>
+            </div>
+            <div class="grid-item">
+                <picture>
+                    <source srcset="justin-bieber-vespa-4.jpeg" media="(min-width: 800px)">
+                    <img src="justin-bieber-vespa-4.jpeg" alt="Another angle of Justin Bieber's Vespa" class="responsive-image">
+                </picture>
+            </div>
+            <div class="grid-item">
+                <picture>
+                    <source srcset="justin-bieber-vespa-5.jpeg" media="(min-width: 800px)">
+                    <img src="justin-bieber-vespa-5.jpeg" alt="Detail of Vespa design" class="responsive-image">
+                </picture>
+            </div>
+        </section>
+        <section id="contact" class="fade-in">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <fieldset>
+                    <legend>Contact Preferences:</legend>
+                    <label for="email">Email:</label>
+                    <input type="radio" id="email" name="contact" value="email">
+
+                    <label for="phone">Phone:</label>
+                    <input type="radio" id="phone" name="contact" value="phone">
+
+                    <label for="newsletter">Subscribe to newsletter</label>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                </fieldset>
+
+                <label for="topic">Topic:</label>
+                <select id="topic" name="topic">
+                    <option value="general">General</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="support">Support</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Justin Bieber's Vespa</p>
+    </footer>
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
